@@ -10,15 +10,24 @@ import java.awt.EventQueue;
 	 try {
 		 
 		 String a   =(String) ThreadTestFrame.Text1.getText();
-		 do {if (a==null) {sleep(5000);} else {
-		System.out.println("123" + " " + ThreadTestFrame.Text1);}
-	} while (a!="0");
+			do {
+				if (a == null) {
+					sleep(5000);
+				} else {
+				}
+				sleep(1000);
+				System.out.println("123" + " " + ThreadTestFrame.Text1);
+	} while (a!="0"|| a==null);
 
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
  }
+		 {
+	// TODO Auto-generated method stub
+	
+}
 		public static void main(String[] args) {
 			ThreadTest mAnotherThread;
 			System.out.println(ThreadTestFrame.Text1);

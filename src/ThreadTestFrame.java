@@ -19,11 +19,11 @@ public class ThreadTestFrame {
 	 * Launch the application.
 	 */
 	
-	  public static void main(String[] args) { EventQueue.invokeLater(new
+	 /* public static void main(String[] args) { EventQueue.invokeLater(new
 	  Runnable() { public void run() { try { ThreadTestFrame window = new
 	  ThreadTestFrame(); window.frame.setVisible(true); } catch (Exception e) {
 	  e.printStackTrace(); } } }); }
-	 
+	 */
 	/**
 	 * Create the application.
 	 */

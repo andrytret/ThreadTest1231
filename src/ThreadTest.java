@@ -1,6 +1,6 @@
 import java.awt.EventQueue;
 
-class ShareData extends Thread {
+class Thread1 extends Thread {
 	@Override
 	public void run() {
 			try {do {
@@ -17,12 +17,12 @@ class ShareData extends Thread {
 	 * @param args
 	 */
 
- public class ThreadTest {
-		static ShareData mAnotherThread;
-
-		public void main(String[] args) {
+ class ThreadTest {
+ }}
+		public static void main(String[] args) {
+			Thread1 mAnotherThread;
 			System.out.println(ThreadTestFrame.Text1);
-			mAnotherThread = new ShareData();
+			mAnotherThread = new Thread1();
 			mAnotherThread.start();
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
@@ -36,5 +36,5 @@ class ShareData extends Thread {
 			});
 		}
 
-	}}}
+	}
 

@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
 
-import java.awt.EventQueue;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
@@ -59,7 +59,6 @@ public class ThreadTestFrame {
 		 final JLabel Text1 = new JLabel(" ");
 		Text1.setBounds(4, 48, 46, 14);
 	
-
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String t1 = (String) textArea.getText();

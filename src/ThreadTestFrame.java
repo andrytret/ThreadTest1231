@@ -13,8 +13,12 @@ import javax.swing.JLabel;
 
 public class ThreadTestFrame {
 
-	JFrame frame;
+	/**
+	 * 
+	 */
+	
 
+	JFrame frame;
 	/**
 	 * Launch the application.
 	 */
@@ -28,7 +32,8 @@ public class ThreadTestFrame {
 	 * Create the application.
 	 */
 	public JTextArea textArea;
-    public static JLabel Text1;
+    public JLabel Text1;
+    
 	public ThreadTestFrame() {
 		initialize();
 	}
@@ -58,12 +63,13 @@ public class ThreadTestFrame {
 		
 		 final JLabel Text1 = new JLabel(" ");
 		Text1.setBounds(4, 48, 46, 14);
-	
+	Text1.setText("1223");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 				String t1 = (String) textArea.getText();
 				Text1.setText(t1);
-			
+			ShareData.Text= t1;
 			}
 
 			
@@ -71,4 +77,7 @@ public class ThreadTestFrame {
 		});
 
 	}
+
+	
+	
 }

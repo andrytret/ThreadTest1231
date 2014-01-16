@@ -1,38 +1,40 @@
 import java.awt.EventQueue;
 
+/**
+ * @param args
+ */
 
-	/**
-	 * @param args
-	 */
-	
- class ThreadTest extends Thread{public void run() {
-		
-	 try {
-		 
-		 String a   =(String) ThreadTestFrame.Text1.getText();
-			do {
-				if (a == null) {
-					sleep(5000);
-				} else {
-				}
+class ThreadTest extends Thread {
+
+	public void run() {
+
+		try {
+			String a = null;
+			while (a != "0") {
 				sleep(1000);
-				System.out.println("123" + " " + ThreadTestFrame.Text1);
-	} while (a!="0"|| a==null);
+				a = ShareData.Text;
+				if (a.equals("0")) {
+					break;
+				} 
 
-			
+				System.out.println("123" + " " + a);
+			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
- }
-		 {
-	// TODO Auto-generated method stub
-	
-}
-		public static void main(String[] args) {
-			ThreadTest mAnotherThread;
-			System.out.println(ThreadTestFrame.Text1);
-			mAnotherThread = new ThreadTest();
-			mAnotherThread.start();
+	}
+
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+	public static void main(String[] args) {
+		ThreadTest mAnotherThread;
+		mAnotherThread = new ThreadTest();
+		mAnotherThread.start();
+		{
 			EventQueue.invokeLater(new Runnable() {
 				public void run() {
 					try {
@@ -43,7 +45,11 @@ import java.awt.EventQueue;
 					}
 				}
 			});
+
 		}
 
 	}
 
+}
+
+// модификатор статик и его применение: класс, поле, метод.
